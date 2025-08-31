@@ -40,12 +40,6 @@ const contactMethods = [
     href: "https://www.balasubramanyam.xyz",
     icon: <Globe className="w-4 h-4" />,
   },
-  {
-    label: "Phone",
-    value: "+44 7367675677",
-    href: "tel:+447367675677",
-    icon: <Phone className="w-4 h-4" />,
-  },
 ];
 
 export const Contact = () => {

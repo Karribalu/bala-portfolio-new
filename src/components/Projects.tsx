@@ -9,25 +9,25 @@ import {
 
 const projects = [
   {
-    name: "DesignSage",
-    description:
-      "AI-driven interview platform for real-time system design evaluation",
+    name: "Vellum",
+    description: "A rust implementation of Lucene, a powerful search library.",
     status: "In Progress",
-    tech: [
-      "React",
-      "NextJS",
-      "ReactFlow",
-      "TypeScript",
-      "Python",
-      "FastAPI",
-      "OpenAI",
-    ],
+    tech: ["Rust"],
     highlights: [
-      "Drag and drop canvas for system design",
-      "Integrated AI assistant for dynamic follow-ups",
-      "Real-time automated feedback system",
+      "Full-text search capabilities",
+      "Tokenization and indexing",
+      "Query parsing and execution",
     ],
-    github: "#",
+    github: "https://www.github.com/karribalu/vellum",
+  },
+  {
+    name: "Portfolio",
+    description:
+      "A personal portfolio website built with React and TypeScript.",
+    status: "Completed",
+    tech: ["React", "TypeScript"],
+    highlights: ["Terminal like UI", "Responsive design"],
+    github: "https://www.github.com/karribalu/bala-portfolio-new",
   },
   {
     name: "Dynamic Hashing Algorithm",
@@ -40,7 +40,7 @@ const projects = [
       "Memory efficient dynamic resizing",
       "Comprehensive test suite",
     ],
-    github: "#",
+    github: "https://www.github.com/karribalu/r-dash",
   },
   {
     name: "PREQUAL Load Balancer",
@@ -53,7 +53,7 @@ const projects = [
       "gRPC communication layer",
       "Latency optimization algorithms",
     ],
-    github: "#",
+    github: "https://www.github.com/karribalu/rs-prequal",
   },
   {
     name: "Monkey Language Interpreter",
@@ -65,7 +65,7 @@ const projects = [
       "AST evaluation engine",
       "Built-in functions and data types",
     ],
-    github: "#",
+    github: "https://www.github.com/karribalu/rs-monkey",
   },
   {
     name: "NFT Marketplace",
@@ -77,12 +77,11 @@ const projects = [
       "Web3 integration",
       "Decentralized storage",
     ],
-    github: "#",
+    github: "https://www.github.com/karribalu/nft-marketplace",
   },
 ];
 
 const contributions = [
-  "influxdata/influxdb/pull/25997",
   "meilisearch/meilisearch/pull/4787",
   "meilisearch/meilisearch/pull/4716",
   "meilisearch/meilisearch/pull/4231",
@@ -100,7 +99,10 @@ export const Projects = () => {
           <div className="space-y-6">
             {projects.map((project, index) => (
               <div key={index} className="space-y-2">
-                <div className="flex items-center gap-2 mb-2">
+                <div
+                  className="flex items-center gap-2 mb-2 cursor-pointer"
+                  onClick={() => window.open(project.github, "_blank")}
+                >
                   <Folder className="w-4 h-4 text-accent" />
                   <span className="text-primary font-semibold">
                     {project.name}
@@ -139,6 +141,8 @@ export const Projects = () => {
                   <div className="flex items-center gap-4 text-xs">
                     <a
                       href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center gap-1 text-accent hover:text-secondary transition-colors"
                     >
                       <Github className="w-3 h-3" />

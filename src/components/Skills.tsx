@@ -1,16 +1,5 @@
 import { Terminal } from "./Terminal";
-import {
-  Code,
-  Database,
-  Cloud,
-  GitBranch,
-  Monitor,
-  Layers,
-  Settings,
-  Cpu,
-  Globe,
-  Lock,
-} from "lucide-react";
+import { Code, Database, Cloud, Monitor, Layers, Settings } from "lucide-react";
 
 const skillCategories = [
   {
